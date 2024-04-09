@@ -35,7 +35,7 @@ class Program
         Console.WriteLine("Студенты, упорядоченные по возрастанию среднего балла:");
         foreach (var student in students)
         {
-            Console.WriteLine($"Фамилия: {student.SurName}, Группа: {student.NumberOfGroup}, Средний балл: {student.GetAverageGrade()}");
+            Console.WriteLine($"Фамилия: {student.SurName}, Имя: {student.Name}, Отчество: {student.Otchestvo}, Группа: {student.NumberOfGroup}, Средний балл: {student.GetAverageGrade()}");
         }
     }
 }
