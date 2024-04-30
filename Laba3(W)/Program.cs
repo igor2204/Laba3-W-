@@ -31,7 +31,7 @@ class Program
             return x.GetAverageGrade().CompareTo(y.GetAverageGrade());
         });
 
-        // Вывод отсортированного списка студентов
+      
         Console.WriteLine("Студенты, упорядоченные по возрастанию среднего балла:");
         foreach (var student in students)
         {
