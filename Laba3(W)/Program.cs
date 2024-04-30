@@ -26,8 +26,10 @@ class Program
         students[5] = new Student { SurName = "Антонов", Name = "Владислав", Otchestvo = "Петрович", NumberOfGroup = 12, Grades = new int[] { 2, 3, 3, 4, 2 } };
         students[6] = new Student { SurName = "Максимов", Name = "Николай", Otchestvo = "Александрович", NumberOfGroup = 11, Grades = new int[] { 4, 4, 4, 5, 5 } };
 
-        // Сортировка массива по возрастанию среднего балла
-        Array.Sort(students, (x, y) => x.GetAverageGrade().CompareTo(y.GetAverageGrade()));
+        Array.Sort(students, delegate (Student x, Student y)
+        {
+            return x.GetAverageGrade().CompareTo(y.GetAverageGrade());
+        });
 
         // Вывод отсортированного списка студентов
         Console.WriteLine("Студенты, упорядоченные по возрастанию среднего балла:");
